@@ -4,9 +4,9 @@
   gather_facts: true # this will make not to gather facts before running tasks
 
   tasks: 
-    - name: bits
-      state: stopped
-      debug:
-        msg: >
-             this is for windows {{ stopping bits service }}
-...
+    - name: Stopping Service
+        win_service
+          name: bits       
+          state: stopped
+      
+      ...
