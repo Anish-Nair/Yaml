@@ -1,0 +1,12 @@
+---
+-
+  hosts: all
+  gather_facts: true # this will make not to gather facts before running tasks
+
+  tasks: 
+    - name: Stopping Service
+        win_service
+          name: winlogon      
+          state: stopped
+      
+      ...
